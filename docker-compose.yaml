@@ -1,0 +1,48 @@
+version: '3.8'
+services:
+  nginx:
+    build:
+      dockerfile: nginx.dockerfile
+      context: .
+    image: luumarodrigues/nginx
+    container_name: nginx
+    ports:
+      - "80:80"
+    networks: 
+      - proxy-network
+    depends_on: 
+      - nodejs
+
+  mysql:
+    build:
+      dockerfile: mysql.dockerfile
+      context: .
+    environment: 
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_DATABASE: packages
+      MYSQL_USER: user_packages
+      MYSQL_PASSWORD: passwords
+    image: luumarodrigues/mysql
+    container_name: mysql
+    networks: 
+      - dev-network
+
+  nodejs:
+    build:
+      dockerfile: nodejs.dockerfile
+      context: .
+    image: luumarodrigues/nodejs
+    container_name: nodejs
+    ports:
+      - "8888"
+    networks:
+      - dev-network
+      - proxy-network
+    depends_on:
+      - mysql
+
+networks:
+  dev-network:
+    driver: bridge
+  proxy-network:
+    driver: bridge
