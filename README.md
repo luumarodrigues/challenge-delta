@@ -2,6 +2,14 @@
 
 O projeto consiste em uma API implementada com Node.js​ + MySQL​ para criação e consulta de pacotes
 
+- Criação das imagens docker (mysql,nginx,nodejs) de acordo com a necessida do projeto
+- Criação do docker-compose para subir o ambiente
+- Criação do diagrama da infraestrutura do projeto
+- Correção do database_schema.sql
+- Automatização do processo de build e deploy
+- Automatização do preocesso de criação, exclusão e listagem de pacotes.
+
+
 ## Diagrama - Infraestrutura
 <p align="center">
   <img src="Diagrama.jpg" alt="Diagrama" />
@@ -12,7 +20,7 @@ O projeto consiste em uma API implementada com Node.js​ + MySQL​ para criaç
 * Ter docker instalado
 * Ter docker-compose instalado
 
-## Executar:
+## Executar build e deploy:
 
 - Clone o repositório do projeto
 ```
@@ -27,3 +35,29 @@ $ sh start.sh
 - Após o deploy, escolha entre as opções para criar, listar ou deletar os pacotes.
 
 
+## Gerenciar pacotes
+
+# Caso queira testar o gerenciamento dos pacotes de forma automatizada, execute:
+
+```
+$ sh requests.sh
+```
+
+# Comandos para gerenciar os pacotes de forma manual
+
+* Listar pacotes:
+
+```
+$ curl --request GET --url http://localhost/packages
+```
+* Criar pacotes:
+
+```
+$ curl --request POST --url http://localhost/packages --header 'Content-type: text/plain' --data "Pacote teste"
+```
+* Deletar pacotes:
+Passe o id do pacote que dejesa deletar.
+
+```
+$ curl --request DELETE --url "http://localhost/packages/id"
+```
