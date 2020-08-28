@@ -4,7 +4,7 @@ O projeto consiste em uma API implementada com Node.js​ + MySQL​ para criaç
 
 ##Diagrama - Infraestrutura
 <p align="center">
-  <img src="diagrama.jpg" alt="Diagrama" />
+  <img src="Diagrama.jpg" alt="Diagrama" />
 </p>
 
 ##Pré-requisitos:
