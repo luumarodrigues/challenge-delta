@@ -16,9 +16,9 @@ O projeto consiste em uma API implementada com Node.js​ + MySQL​ para criaç
 </p>
 
 ## Pré-requisitos:
-* Ter o git instalado
-* Ter docker instalado
-* Ter docker-compose instalado
+-  Ter o git instalado
+-  Ter docker instalado
+-  Ter docker-compose instalado
 
 ## Executar build e deploy:
 
@@ -32,31 +32,29 @@ $ git clone https://github.com/luumarodrigues/challenge-delta.git
 ```
 $ sh start.sh
 ```
-- Após o deploy, escolha entre as opções para criar, listar ou deletar os pacotes.
-
 
 ## Gerenciar pacotes
 
-# Caso queira testar o gerenciamento dos pacotes de forma automatizada, execute:
+### Caso queira testar o gerenciamento dos pacotes de forma automatizada, execute:
 
 ```
 $ sh requests.sh
 ```
 
-# Comandos para gerenciar os pacotes de forma manual
+### Comandos para gerenciar os pacotes de forma manual
 
-* Listar pacotes:
+-  Listar pacotes:
 
 ```
 $ curl --request GET --url http://localhost/packages
 ```
-* Criar pacotes:
+- Criar pacotes:
 
 ```
 $ curl --request POST --url http://localhost/packages --header 'Content-type: text/plain' --data "Pacote teste"
 ```
-* Deletar pacotes:
-Passe o id do pacote que dejesa deletar.
+-  Deletar pacotes:
+- obs: Passe o id do pacote que dejesa deletar.
 
 ```
 $ curl --request DELETE --url "http://localhost/packages/id"
