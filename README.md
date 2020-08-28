@@ -2,17 +2,17 @@
 
 O projeto consiste em uma API implementada com Node.js​ + MySQL​ para criação e consulta de pacotes
 
-##Diagrama - Infraestrutura
+## Diagrama - Infraestrutura
 <p align="center">
   <img src="Diagrama.jpg" alt="Diagrama" />
 </p>
 
-##Pré-requisitos:
+## Pré-requisitos:
 * Ter o git instalado
 * Ter docker instalado
 * Ter docker-compose instalado
 
-##Executar 
+## Executar:
 
 - Clone o repositório do projeto
 ```
