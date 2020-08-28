@@ -2,12 +2,12 @@
 
 O projeto consiste em uma API implementada com Node.js​ + MySQL​ para criação e consulta de pacotes
 
-- Criação das imagens docker (mysql,nginx,nodejs) de acordo com a necessida do projeto
+- Criação das imagens docker (mysql,nginx,nodejs) configuradas de acordo com a necessida do projeto
 - Criação do docker-compose para subir o ambiente
 - Criação do diagrama da infraestrutura do projeto
 - Correção do database_schema.sql
-- Automatização do processo de build e deploy
-- Automatização do preocesso de criação, exclusão e listagem de pacotes.
+- Automatização do processo de build e deploy com docker-compose
+- Automatização do processo de criação, exclusão e listagem de pacotes.
 
 
 ## Diagrama - Infraestrutura
